@@ -1,0 +1,225 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+/* nav */
+
+nav {
+    display:flex;
+    justify-content: space-between;
+    transition: all .3s ease;
+    background: linear-gradient(to left, rgb(165, 42, 106), rgb(88, 7, 49));
+    font-family: 'Varela Round', sans-serif;
+}
+
+nav div {
+    display: flex;
+    padding:.5rem;
+    margin:1rem;
+    align-items: center;
+    font-size:14px;
+}
+
+nav div ul {
+    display: flex;
+}
+
+nav div ul li {
+    list-style-type: none;
+    margin:0 1rem 0 0;
+}
+
+nav ul li i {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+nav div h1 { 
+    font-size:2rem;
+}
+
+.icon {
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+}
+
+nav a {
+    text-decoration: none;
+
+}
+
+nav span {
+    margin: 0 .5rem 0 .5rem;
+    font-size: 2rem;
+    color:white;
+}
+
+a:link, a:visited {
+    padding:10px;
+    background-color: rgb(236, 181, 29);
+    border-radius: 8px;
+}
+
+a:hover {
+    background-color: rgb(235, 198, 97);
+    transition: .2s ease-in-out;
+}
+
+
+/* main */
+
+.maintitle {
+    grid-area: maintitle;
+    text-align: center;
+    margin-bottom:1.5rem;
+}
+
+.item1 {
+    grid-area: nav;
+}
+
+.item2 {
+    grid-area: main;
+    background-image: url("https://www.lufthansa.com/content/dam/lh/images/local_images/homepage/stage-teasers/borabora_desktop_1295228783_1440x500.png.transform/lh-dcep-transform-width-1440/img.jpg");
+    height:50vh;
+}
+
+.item3 {
+    grid-area:article1;
+}
+
+.item4 {
+    grid-area:article2;
+}
+
+.item5 {
+    grid-area:article3;
+}
+
+.item6 {
+    display: flex;
+    flex-direction: column;
+    grid-area: aside;
+    gap:1rem;
+}
+
+.item7 {
+    grid-area: bar;
+    background: linear-gradient(to left, rgb(165, 42, 106), rgb(88, 7, 49));
+    margin-top:2rem;
+    height:50px;
+}
+
+.teaser1 {
+    display: flex;
+    height:50%;
+}
+
+
+
+aside div section {
+    width:100%;
+    border-radius: 15px;
+    box-shadow: 0 0.2rem 0.4rem 0.2rem rgb(0 0 0 / 10%);
+}
+
+
+.grid-container {
+    font-family: 'Varela Round', sans-serif;
+    margin:2rem 7rem 2rem 7rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "nav nav nav"
+    ". maintitle ."
+    "article1 article2 article3"
+    "bar bar bar"
+    "main main aside"
+    ;
+    gap:1rem;
+}
+
+
+/*article */
+
+article {
+    border-radius: 10px;
+    box-shadow: 0 0.2rem 0.4rem 0.2rem rgb(0 0 0 / 10%);
+}
+
+article img {
+    width:100%;
+    height:130px;
+}
+
+article h2 {
+    font-family: 'Gentium Book Plus', serif;
+}
+
+article div {
+    text-align: center;
+    padding:10px 20px 20px 20px;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        margin:1rem;
+        grid-template-columns:1fr;
+        grid-template-rows: 20px 80px repeat(3, 0.5fr) 80px 30vh;
+        grid-template-areas: 
+        "nav"
+        "maintitle"
+        "article1"
+        "article2"
+        "article3"
+        "bar"
+        "main"
+        "aside"
+        ;
+
+    }    
+
+    .item2 {
+        height:30vh;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .buttons {
+        display: none;
+    }
+
+    aside div section {
+        height:20vh;
+    }
+
+    nav div h1 {
+        font-size:1.5rem;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    
+    
+    nav span {
+        font-size: 1.5rem;
+    }
+
+
+
+
+}
+
+    
+
+
+
+
+
+
